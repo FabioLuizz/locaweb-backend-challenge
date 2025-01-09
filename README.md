@@ -1,9 +1,9 @@
-# Aplicação Front
-Bem-vindo ao projeto desenvolvido em Kotlin! Este projeto faz parte e é responsavel por integrar a uma API Desenvolvida em java [**Back-End**](https://github.com/FabioLuizz/locaweb-backend-challenge), proporcionando a comunicação entre os serviços e a realização de operações como envio de requisições e processamento de dados.
+# Aplicação Back-end
+Este projeto é uma API RESTful projetada para integrar-se a um [**Front-end**](https://github.com/FabioLuizz/locaweb-frontend-challenge) desenvolvido em Kotlin. Sua principal função é gerenciar a comunicação entre serviços, permitindo o envio de requisições e o processamento de dados de forma eficiente.
 
 
 
-O principal objetivo desse projeto é garantir que o sistema de front-end em Kotlin seja capaz de interagir com as funcionalidades do back-end de forma eficiente.
+O projeto se trata de um aplicativo de e-mail responsável por gerenciar mensagens de usuário, bem como oferecer funcionalidades de organização de pastas, filtros inteligentes e com o objetivo de melhorar a produtividade e facilitar a comunicação dos usuários de forma prática e segura.
 
 
 
@@ -15,41 +15,49 @@ O Desenvolvimento desse projeto é para fins de conhecimentos, com objetivo de a
 
 
 
-- **JetPack Compose**: Biblioteca moderna para construção de interfaces de usuário em Android, proporcionando uma abordagem declarativa e eficiente, assim facilitando na criação de componentes.
-
-- **Kotlin**: Utilizado para o desenvolvimento do aplicativo Android.
-
-- **Retrofit**: Usado para consumir APIs RESTful, facilitando a comunicação entre o aplicativo e o servidor.
-
-- **AndroidView**: Utilizado para integrar visualizações nativas do Android  (como CalendarView) com Jetpack Compose. 
-
-  
+- **Spring Framework**: Framework para desenvolvimento de aplicativos Java, utilizado para construir API Restful.
+- **Java**: Utilizado para o desenvolvimento do Back-end para implementar a lógica de negócios.
 
 
 
 ### Arquitetura de MicrosServiços:
 
 - **Microserviços**: Organizamos a aplicação em serviços independentes, cada um responsável por uma funcionalidade específica.
+
 - **Comunicação entre Microserviços**: Utilizamos comunicação RESTful e troca de mensagens para a integração entre os microserviços.
+
+  
+
+### Outras Tecnologias:
+
+- **Lombok**: Utilizado para reduzir a verbosidade do código, gerando automaticamente getters, setters e outros métodos.
+- **Oracle Database**: Banco de dados utilizado para armazenar e gerenciar os dados da aplicação.
+- **Data Transfer Objects (DTOs)**: Utilizados para consultas e persistência de dados, garantindo a integridade e consistência das informações.
+- **Validação e Tratamento de Exceções Avançados**: Implementados para garantir a confiabilidade e robustez da aplicação em cenários complexos.
+- **JPQL (Java Persistence Query Language)**: Utilizado para consultas personalizadas, paginação e ordenação de resultados.
+- **Autenticação JWT (JSON Web Token)**: Implementada para garantir a segurança dos serviços e dados da aplicação.
+- **Docker**: Gerenciamento e execução de aplicações em containers.
 
 
 
 ### Como Testar:
 
-1. Faça o download ou clone o repositório do projeto e instale as dependências necessárias para execução do projeto.
+1. Faça o clone do repositório do projeto e instale as dependências necessárias para execução do projeto utilizando o seguinte comando.
 
    ```
-   ./gradlew build
+   mvn install
    ```
 
-2. Quando você estiver com o projeto clonado na sua maquina, através da sua IDE com o projeto aberto você ira executar e emular o aplicativo android.
+3. Quando você estiver com o projeto clonado na sua maquina, através da sua IDE com o projeto aberto você pode executar a aplicação utilizando docker com o seguinte comando:
 
-3. Baixe e também execute a parte do [**Back-end**](https://github.com/FabioLuizz/locaweb-backend-challenge)
+   ```
+   docker compose up --build
+   ```
 
-4. Ao executar as duas partes do projeto, no próprio aplicativo emulado, comece pelo gerenciamento de usuários, realizando o registro e login, logo em seguida você pode ter acesso ao aplicativo.
+   - **Porta**: A aplicação será exposta na porta 8080 (acesse em http://localhost:8080) com o container já em execução.
+   
+5. Clone também o repositório do [**Front-end**](https://github.com/FabioLuizz/locaweb-frontend-challenge) para consumir o projeto.
+
+4. Comece pelo gerenciamento de usuários, realizando o registro e login conforme descrito na documentação.
 
    
-
-![image1](https://github.com/FabioLuizz/locaweb-frontend-challenge/blob/master/app/src/main/res/drawable/image1.png?raw=true width="200
-
-")
